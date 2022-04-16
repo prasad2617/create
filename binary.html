@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       
+       function binarysearch(sortedArray,key){
+       let start=0;
+       let end=sortedArray.length-1;
+       while (start<=end){
+           let middle=Math.floor((start+end)/2);
+           if (sortedArray[middle]===key)
+           {
+               return (middle);
+           }
+           else if (sortedArray[middle]<key){
+               start=middle+1;
+         }
+         else{
+             end=middle-1;
+         }
+         return(-1);
+       }
+
+       }
+       let sortedArray=[20,30,23,55,62,40];
+       let key=23;
+       console.log(binarysearch(sortedArray,key));
+       
+   </script> 
+</body>
+</html>
